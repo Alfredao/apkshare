@@ -19,7 +19,7 @@ return [
                     'route'       => '/crawler[/:action[/:id]]',
                     'constraints' => [
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                        'id'     => '[0-9]+',
+                        'id'     => '[a-zA-Z][a-zA-Z0-9_-]*',
                     ],
                     'defaults'    => [
                         'controller' => Controller\IndexController::class,

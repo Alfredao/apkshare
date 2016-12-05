@@ -44,13 +44,10 @@ class IndexController extends AbstractActionController
 
     public function updateAction()
     {
-        $id = $this->params()->fromRoute();
-
-        var_dump($id);
-        exit;
+        $id = $this->params()->fromRoute()->get('id', 'com.mojang.minecraftpe');
 
         $scraper = new \Raulr\GooglePlayScraper\Scraper($this->getClient());
-        $app = $scraper->getApp('com.mojang.minecraftpe');
+        $app = $scraper->getApp($id);
 
         var_dump($app);
         exit;
