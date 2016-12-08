@@ -6,11 +6,6 @@ use Zend\Router\Http\Segment;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
-    'controllers'  => [
-        'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
-        ],
-    ],
     'router'       => [
         'routes' => [
             'crawler' => [
@@ -27,6 +22,11 @@ return [
                     ],
                 ],
             ],
+        ],
+    ],
+    'controllers'  => [
+        'factories' => [
+            Controller\IndexController::class => InvokableFactory::class,
         ],
     ],
     'view_manager' => [
