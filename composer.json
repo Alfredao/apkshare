@@ -17,11 +17,13 @@
     "zendframework/zend-mvc": "^3.0.1",
     "zfcampus/zf-development-mode": "^3.0",
     "zendframework/zend-servicemanager": "^3.1",
-    "raulr/google-play-scraper": "^0.2.0"
+    "raulr/google-play-scraper": "^0.2.0",
+    "doctrine/doctrine-orm-module": "^1.1"
   },
   "autoload": {
     "psr-4": {
       "Application\\": "module/Application/src/",
+      "APK\\": "module/APK/src/",
       "Crawler\\": "module/Crawler/src/"
     }
   },

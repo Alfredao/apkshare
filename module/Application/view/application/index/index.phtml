@@ -5,19 +5,25 @@
             <button type="button" class="btn btn-primary btn-sm" data-toggle="offcanvas">Toggle nav</button>
         </p>
         <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some
-                responsive-range viewport sizes to see it in action.</p>
+            <h1>Champinho's APK acreanus!</h1>
+            <p>Download APKs encefalus acreanus binotopicos champoso alves</p>
         </div>
-        <div class="row">
-            <?php for ($i = 0; $i <= 12; $i++) : ?>
-                <div class="col-xs-3">
-                    <h5>Heading</h5>
-                    <p class="small">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
-                        commodo, tortor mauris condimentum nibh. </p>
-                    <p><a class="btn btn-secondary btn-xs" href="#" role="button">Ver &raquo;</a></p>
-            </div>
-            <?php endfor; ?>
+        <div class="row apk-list">
+            <?php foreach ($this->apps as $app) : ?>
+                <div class="apk-detail" style="">
+                    <div class="apk-image">
+                        <img src="<?php echo $app->getUrl(); ?>"/>
+                    </div>
+                    <div class="apk-description">
+                        <p><?php echo $app->getName(); ?></p>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star-half-o"></span>
+                        <span class="fa fa-star-o"></span>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 
